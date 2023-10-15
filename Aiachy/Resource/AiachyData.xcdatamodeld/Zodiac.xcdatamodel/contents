@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22213.2" systemVersion="22G90" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AscendiantEntity" representedClassName="AscendiantEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="ascendiantDataVersion" optional="YES" attributeType="String"/>
+        <attribute name="comment" optional="YES" attributeType="String"/>
+        <attribute name="determinedZodiac" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="serialNumber" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="zodiacEntity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ZodiacEntity" inverseName="ascendiantEntity" inverseEntity="ZodiacEntity"/>
+    </entity>
+    <entity name="ChakraStatusEntity" representedClassName="ChakraStatusEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="comment" optional="YES" attributeType="String"/>
+        <attribute name="rate" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="serialNumber" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="statusDataVersion" optional="YES" attributeType="String"/>
+        <attribute name="tier" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="zodiacEntity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ZodiacEntity" inverseName="chakraStatusEntity" inverseEntity="ZodiacEntity"/>
+    </entity>
+    <entity name="CompatibilityEntity" representedClassName="CompatibilityEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="compatibilityDataVersion" optional="YES" attributeType="String"/>
+        <attribute name="serialNumber" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="zodiac" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="zodiacEntity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ZodiacEntity" inverseName="compatibilityEntity" inverseEntity="ZodiacEntity"/>
+    </entity>
+    <entity name="TuneEntity" representedClassName="TuneEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="determinedZodiac" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="duration" optional="YES" attributeType="Integer 16" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="isPremium" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="statement" optional="YES" attributeType="String"/>
+        <attribute name="tuneDataVersion" optional="YES" attributeType="String"/>
+        <attribute name="tuneId" optional="YES" attributeType="String"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="ZodiacEntity" representedClassName="ZodiacEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="comment" optional="YES" attributeType="String"/>
+        <attribute name="date" optional="YES" attributeType="String"/>
+        <attribute name="serialNumber" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="zodiac" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="zodiacDataVersion" optional="YES" attributeType="String"/>
+        <relationship name="ascendiantEntity" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AscendiantEntity" inverseName="zodiacEntity" inverseEntity="AscendiantEntity"/>
+        <relationship name="chakraStatusEntity" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ChakraStatusEntity" inverseName="zodiacEntity" inverseEntity="ChakraStatusEntity"/>
+        <relationship name="compatibilityEntity" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CompatibilityEntity" inverseName="zodiacEntity" inverseEntity="CompatibilityEntity"/>
+    </entity>
+</model>

@@ -1,0 +1,130 @@
+{
+  "identifier" : "D1B6B438",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+
+  ],
+  "settings" : {
+    "_applicationInternalID" : "6463338494",
+    "_developerTeamID" : "MW2482B7WH",
+    "_failTransactionsEnabled" : false,
+    "_lastSynchronizedDate" : 714701852.67209995,
+    "_locale" : "en_US",
+    "_storefront" : "USA",
+    "_storeKitErrors" : [
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Load Products"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Purchase"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Verification"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Store Sync"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Subscription Status"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Transaction"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Manage Subscriptions Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Refund Request Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Offer Code Redeem Sheet"
+      }
+    ]
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "21376840",
+      "localizations" : [
+
+      ],
+      "name" : "Oracle",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "49.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "6463354150",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "Destek Paketi",
+              "displayName" : "Oracle",
+              "locale" : "tr"
+            },
+            {
+              "description" : "Supporter Pack ",
+              "displayName" : "Oracle",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "Oracle.Oracle",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Oracle",
+          "subscriptionGroupID" : "21376840",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "5.99",
+          "familyShareable" : false,
+          "groupNumber" : 2,
+          "internalID" : "6463344302",
+          "introductoryOffer" : null,
+          "localizations" : [
+
+          ],
+          "productID" : "Oracle.Zodiac",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Zodiac",
+          "subscriptionGroupID" : "21376840",
+          "type" : "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}
